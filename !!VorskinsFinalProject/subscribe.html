@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vorskins | Subscribe</title>
+
+    <!-- font awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <!-- custom css link  -->
+    <link rel="stylesheet" href="./styles/subscribe.css" />
+
+    <!-- font links  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Jacques+Francois&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- icon links  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- java script link  -->
+    <script src="./script/script.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div class="wrapper">
+        <div class="logo"><a href="#">Vorskins</a></div>
+        <input type="radio" name="slider" id="menu-btn" />
+        <input type="radio" name="slider" id="close-btn" />
+        <ul class="nav-links">
+          <label for="close-btn" class="btn close-btn"
+            ><i class="fas fa-times"></i
+          ></label>
+          <li><a href="./home.html">Home</a></li>
+          <li>
+            <a href="./home.html">About Us</a>
+          </li>
+          <li>
+            <a href="#" class="desktop-item">Products</a>
+            <input type="checkbox" id="showMega" />
+            <label for="showMega" class="mobile-item">Products</label>
+            <div class="mega-box">
+              <div class="content">
+                <div class="row">
+                  <img src="./HOME/promo1.jpg" alt="" />
+                </div>
+                <div class="row">
+                  <header>Skin Care</header>
+                  <ul class="mega-links">
+                    <li><a href="./tonner.html">Toners</a></li>
+                    <li><a href="./mask.html">Mask</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Body Care</header>
+                  <ul class="mega-links">
+                    <li><a href="./bodyScrub.html">Body scrub</a></li>
+                    <li><a href="./bodyLotion.html">Body lotion</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="./promotions.html">Promotions</a></li>
+          <li><a class="on" href="./subscribe.html">Subscribe</a></li>
+        </ul>
+        <label for="menu-btn" class="btn menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+      </div>
+    </nav>
+
+    <div class="flex-justify-content-center">
+      <div class="form-container">
+        <h1 class="heading">Subscribe</h1>
+        <form id="form" action="#" onsubmit="return false">
+          <div class="card-details">
+            <div class="card-box">
+              <span class="details">Full Name</span>
+              <input
+                name="fullname"
+                id="fullname-txt"
+                type="text"
+                placeholder="Full name"
+              />
+              <div class="error-msg" id="fullname-id"></div>
+            </div>
+            <div class="card-box">
+              <span class="details">Password</span>
+              <input
+                name="Password"
+                id="password-txt"
+                type="password"
+                placeholder="Password"
+              />
+              <div class="error-msg" id="password-id"></div>
+            </div>
+            <div class="card-box">
+              <span class="details">Email</span>
+              <input
+                name="email"
+                id="email-txt"
+                type="text"
+                placeholder="Email"
+              />
+              <div class="error-msg" id="email-id"></div>
+            </div>
+            <div class="card-box">
+              <span class="details">Phone Number</span>
+              <input
+                name="phoneNumber"
+                id="phone-txt"
+                type="phone"
+                placeholder="Phone number"
+              />
+              <div class="error-msg" id="phone-id"></div>
+            </div>
+            <div class="card-box">
+              <div class="combo-box">
+                <span class="details">Preferences</span>
+                <select
+                  name="preferences"
+                  class="combo-box-select"
+                  id="preferences-txt"
+                  onchange="getPreferences()"
+                >
+                  <option value="">Select your preferences</option>
+                  <option class="options" value="skin-care">Skin Care</option>
+                  <option class="options" value="body-care">Body Care</option>
+                </select>
+                <div class="error-msg" id="preferences-id"></div>
+              </div>
+            </div>
+            <div class="checkbox-form">
+              <input
+                type="checkbox"
+                name="checkbox"
+                id="checkbox-txt"
+                class="check-box"
+              />
+              <span class="checkbox-text">
+                Agree to receive Vorskins news letter
+              </span>
+              <div class="error-msg" id="checkbox-id"></div>
+            </div>
+            <div class="submit-btn">
+              <button onclick="return validateForm()">Subscribe</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <footer>
+    <div class="container">
+      <div class="footer-col-1">
+        <h3>Contact Info</h3>
+        <a href="#">+44812-3345-6789</a><br />
+        <a href="#">vorskins@gmail.com</a><br />
+        <a href="#">Brighton, England - 155562</a>
+        <!-- <img src="images/payment.png" alt="" /> -->
+      </div>
+      <div class="footer-col-2">
+        <h1 class="logo-1">Vorskins</h1>
+        <p>Download App for Android and ios</p>
+      </div>
+      <div class="footer-col-3">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="./promotions.html">Promotions</a></li>
+          <li><a href="./subscribe.html">Subscribe</a></li>
+        </ul>
+      </div>
+      <div class="footer-col-4">
+        <h3>Follow Us</h3>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/innisfreeHQ/" target="_blank"
+              ><i class="fa-brands fa-facebook"></i> Facebook</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/search?lang=en&q=%23INNISFREE"
+              target="_blank"
+              ><i class="fa-brands fa-twitter"></i> Twitter</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/innisfreeofficial/?hl=en"
+              target="_blank"
+              ><i class="fa-brands fa-instagram"></i> Instagram</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</html>
